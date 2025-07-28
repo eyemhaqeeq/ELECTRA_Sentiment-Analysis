@@ -10,20 +10,21 @@ This project demonstrates sentiment analysis using the ELECTRA (Efficiently Lear
 - Evaluation: Metrics computed on a held-out validation set (20% of data)
 
 ## Results
-- Accuracy: 0.956 (95.6%)
-- Precision: 0.974
-- Recall: 0.974
-- F1 Score: 0.974
-- Training Time: 186.76 seconds
-- Testing Time: 7.07 seconds
+Training time: 557.49 seconds
+Accuracy: 0.9566666666666667
+Precision: 0.975825946817083
+Recall: 0.9719101123595506
+F1 Score: 0.9738640932850824
+Training Time: 557.49 seconds
+Testing Time: 20.31 seconds
 
 ### Interpretation of Results
 - Accuracy (95.6%): The model correctly predicts sentiment for 95.6% of reviews.
-- Precision (97.4%): When the model predicts "positive," it is correct 97.4% of the time.
-- Recall (97.4%): The model identifies 97.4% of all actual positive reviews.
-- F1 Score (97.4%): A balanced measure of precision and recall, indicating strong performance.
-- Training Time: The model trains in ~187 seconds (3.1 minutes).
-- Testing Time: Predictions on the validation set take ~7 seconds.
+- Precision (97.5%): When the model predicts "positive," it is correct 97.4% of the time.
+- Recall (97.2%): The model identifies 97.4% of all actual positive reviews.
+- F1 Score (97.3%): A balanced measure of precision and recall, indicating strong performance.
+- Training Time: The model trains in ~557.49 seconds (9.29 minutes).
+- Testing Time: Predictions on the validation set take ~20.31 seconds.
 
 ## Code Structure
 1. Install Dependencies
@@ -31,7 +32,7 @@ This project demonstrates sentiment analysis using the ELECTRA (Efficiently Lear
 
 2. Load & Preprocess Data
    - Reads Reviews.csv, filters neutral reviews, and converts ratings to binary labels (0 = negative, 1 = positive).
-   - Samples 5,000 reviews for faster experimentation.
+   - Samples 15,000 reviews for faster experimentation.
 
 3. Train-Validation Split
    - 80% for training, 20% for validation.
@@ -67,7 +68,7 @@ This project demonstrates sentiment analysis using the ELECTRA (Efficiently Lear
 1. Hyperparameter Tuning
    - Adjust learning_rate, batch_size, or num_epochs for better performance.
 2. Full Dataset Training
-   - Train on the entire dataset (not just 5,000 samples) for higher accuracy.
+   - Train on the entire dataset (not just 15,000 samples) for higher accuracy.
 3. Deployment
    - Save the trained model and deploy it as an API for real-time sentiment analysis.
 
